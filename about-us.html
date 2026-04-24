@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - DELICIOUS BITES</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family:sans-serif;
+            line-height: 1.6;
+            color: black;
+            background-image:url(Veiw1.jpg);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 80px 0 40px;
+            color: white;
+        }
+
+        h1 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            font-weight: 300;
+            letter-spacing: -2px;
+        }
+
+        .subtitle {
+            font-size: 1.3em;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .hero-section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 60px 40px;
+            margin-bottom: 60px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-content p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, rgb(228, 91, 66) 0%, rgb(116, 4, 4) 100%);
+            border-radius: 15px;
+            color: white;
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-item:hover {
+            transform: translateY(0);
+        }
+
+        .stat-number {
+            font-size: 3em;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin: 80px 0;
+            
+        }
+
+        .about-text {
+            color: #f5f3f3;
+        }
+
+        .about-text h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color:white;
+        }
+
+        .about-text h3 {
+            font-size: 1.5em;
+            margin: 30px 0 15px;
+            color: lightsalmon;
+        }
+        .team-section {
+            background: white;
+            padding: 80px 40px;
+            border-radius: 20px;
+            margin: 60px 0;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .team-member{
+            position: relative;
+        }
+
+        .team-member img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+        margin: 0 auto 20px;
+        overflow: hidden;
+}
+
+        .team-member:hover img {
+            transform: scale(1.1);
+        }
+
+        .team-member h4 {
+            font-size: 1.3em;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 80px 40px;
+            background: linear-gradient(135deg, rgb(228, 91, 66) 0%, rgb(116, 4, 4) 100%);
+            color: white;
+            border-radius: 20px;
+            margin: 60px 0;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, rgb(233, 100, 77) 0%, rgb(95, 5, 5) 100%);
+            color: white;
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: 500;
+            margin-top: 20px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .cta-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+           <div style="text-align: center;">
+           <img src="logo.jpg" alt="logo" width="120">
+           </div>
+            <h1 class="fade-in">About Us</h1>
+            <p class="subtitle fade-in">Crafting the future, one innovation at a time</p>
+        </header>
+
+        <section class="hero-section fade-in">
+            <div class="hero-content">
+                <p>
+                   Our founder,<b>Namutebi</b>
+                    After training in Cape Town and London,she came home to Kampala.
+                    We opened with 6 tables and a charcoal grill. Today we're 80 seats.
+                    We work with 14 small farms within 100 km of the city.Fish comes off Lake Victoria boats everymorning at 5 AM. 
+                    Head Chef Mr.Peter leads a team of 12 from Uganda, Kenya, and Rwanda.
+                    <p>
+                        <b>The Signature dish:</b> Luwombo-inspired chicken, cooked 4 hours in banana leaves.
+                    </p>
+                </p>
+                <p>
+                   <b>Our mission:</b>  modern Ugandan cuisine without losing its soul.
+                </p>
+            </div>
+        </section>
+
+        <div class="stats fade-in">
+            <div class="stat-item">
+                <span class="stat-number">500+</span>
+                Happy Clients
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">10+</span>
+                Years Experience
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">1,200+</span>
+                Projects Completed
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">100%</span>
+                Satisfaction
+            </div>
+        </div>
+
+        <section class="about-grid">
+            <div class="about-text fade-in">
+                <h2>Our Story</h2>
+                <p>
+                     Meza was born in 2021 from a simple idea: <b>"Great food tastes better when you know where it came from."</b> 
+                    Our founder,<b>Namutebi</b>, grew up on her grandmother's cooking in Mbale.
+                </p>
+                
+                <h3>Our craft and Creativity</h3>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li style="margin: 15px 0; font-size: 1.1em;">✨ <strong>Food</strong> We mill our own spice blends in-house every Monday. 
+                    No bouillon cubes, no shortcuts. Stock simmers 12 hours.</li>
+                    <li style="margin: 15px 0; font-size: 1.1em;">🤝 <strong>Art on the walls</strong> is from Makerere students- all pieces are for sale</li>
+                    <li style="margin: 15px 0; font-size: 1.1em;">⚡ <strong>Design</strong> The dining room was designed by Mr.Sebulime Jules using recycled mvule wood.</li>
+                </ul>
+            </div>
+            <div style="position: relative fade-in;">
+            <img class="about-image" src="https://images.unsplash.com/photo-1760907949886-b15a3679f3ca?q=80&w=386&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+           </div>
+            </div>
+        </section>
+
+        <section class="team-section fade-in">
+            <h2 style="font-size:2.5em; margin-bottom:20px; color: #333;">Meet Our Team</h2>
+            <p style="color: #666; max-width: 600px; margin: 0 auto 50px;">
+                Meet some of Our Staff
+            </p>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="Kiringooba Patricia.jpg" alt="KIRINGOOBA PATRICIA">
+                    <h4>KIRINGOOBA PATRICIA</h4>
+                    <p>Chef</p>
+                </div>
+                <div class="team-member">
+                    <img src="Kalyango Angelo.jpg" alt="KALYANGO ANGELO">
+                    <h4>KALYANGO ANGELO</h4>
+                    <p>Head-Chef</p>
+                </div>
+                <div class="team-member">
+                    <img src="Lusiba Solomon.jpg" alt="LUSIBA SOLOMON">
+                    <h4>LUSIBA SOLOMON.</h4>
+                    <p>Barista</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1510132213289-b9190e80dfc2?q=80&w=964&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Wasswa">
+                   <h4>Wasswa T</h4>
+                    <h4>Chef</h4>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section fade-in">
+            <h2>Ready to Make Your Order?</h2>
+            <p style="font-size: 1.2em; margin-bottom: 30px;">
+                Get yourself something delicious from our menue
+            </p>
+            <a href="#contact" class="cta-button">Get In Touch</a>
+            <p></p>
+            <a href="Location and hours.html" class="cta-button"> next page</a>
+        </section>
+    </div>
+    
+
+</body>
+</html>
